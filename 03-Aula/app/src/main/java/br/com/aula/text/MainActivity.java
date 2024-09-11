@@ -1,11 +1,13 @@
 
 package br.com.aula.text;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
         result1.setText(imc);
 
+
+            // Classificação do IMC
         if (numImc < 18.5) {
             result2.setText("Abaixo do peso");
         }
@@ -67,6 +71,28 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (numImc >= 35) {
             result2.setText("Obesidade grau 2");
+        }
+
+        // Validação de campos
+        if(numPeso < 40 || numPeso > 150 || numAltura < 1.2 || numAltura > 2.5)
+        {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Erro de validação");
+            builder.setMessage("Dados invalidos. Favor inserir corretamente");
+
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    dialog.dismiss();
+                }
+            });
+
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
 
     }
