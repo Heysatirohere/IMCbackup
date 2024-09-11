@@ -52,6 +52,23 @@ public class MainActivity extends AppCompatActivity {
         imc = df.format(numImc);
 
         result1.setText(imc);
+
+        if (numImc < 18.5) {
+            result2.setText("Abaixo do peso");
+        }
+        else if (numImc >= 18.5 && numImc <=24.9) {
+            result2.setText("Peso normal");
+        }
+        else if (numImc >= 25 && numImc <=29.9) {
+            result2.setText("Sobrepeso");
+        }
+        else if (numImc >= 30 && numImc <=34.9) {
+            result2.setText("Obesidade grau 1");
+        }
+        else if (numImc >= 35) {
+            result2.setText("Obesidade grau 2");
+        }
+
     }
 
     public void limpar(View view) {

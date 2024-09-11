@@ -95,7 +95,8 @@
                     android:layout_height="wrap_content"
                     android:onClick="limpar"
 
-                    android:text="Limpar" />
+                    android:text="Limpar"
+                    />
 
                 <TextView
                     android:id="@+id/empaty3"
