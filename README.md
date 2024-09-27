@@ -1,4 +1,6 @@
-# 1 - IMC
+# Projeto IMC 
+
+Aplicativo simples, parte desenvolvido em aula e parte não. Uma calculadora de IMC que retorna suas medidas de acordo com elas 
 
 ## Sátiro Gabriel de Souza Santos - 23025414
 
