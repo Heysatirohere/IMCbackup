@@ -55,24 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
         result1.setText(imc);
 
-
-            // Classificação do IMC
-        if (numImc < 18.5) {
-            result2.setText("Abaixo do peso");
-        }
-        else if (numImc >= 18.5 && numImc <=24.9) {
-            result2.setText("Peso normal");
-        }
-        else if (numImc >= 25 && numImc <=29.9) {
-            result2.setText("Sobrepeso");
-        }
-        else if (numImc >= 30 && numImc <=34.9) {
-            result2.setText("Obesidade grau 1");
-        }
-        else if (numImc >= 35) {
-            result2.setText("Obesidade grau 2");
-        }
-
         // Validação de campos
         if(numPeso < 40 || numPeso > 150 || numAltura < 1.2 || numAltura > 2.5)
         {
@@ -93,22 +75,36 @@ public class MainActivity extends AppCompatActivity {
 
             AlertDialog dialog = builder.create();
             dialog.show();
+            return;
         }
+
+            // Classificação do IMC
+        if (numImc < 18.5) {
+            result2.setText("Abaixo do peso");
+        }
+        else if (numImc >= 18.5 && numImc <=24.9) {
+            result2.setText("Peso normal");
+        }
+        else if (numImc >= 25 && numImc <=29.9) {
+            result2.setText("Sobrepeso");
+        }
+        else if (numImc >= 30 && numImc <=34.9) {
+            result2.setText("Obesidade grau 1");
+        }
+        else if (numImc >= 35) {
+            result2.setText("Obesidade grau 2");
+        }
+
+
 
     }
 
     public void limpar(View view) {
-
-        TextInputEditText nome = findViewById(R.id.TextInputEditNome);
-        TextInputEditText peso = findViewById(R.id.TextInputEditPeso);
-        TextInputEditText altura = findViewById(R.id.TextInputEditAltura);
-
         TextView result1 = findViewById(R.id.result1);
         TextView result2 = findViewById(R.id.result2);
 
             result1.setText("");
             result2.setText("");
-
 
     }
 
