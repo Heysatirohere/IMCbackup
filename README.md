@@ -9,6 +9,7 @@ O Projeto IMC consiste no desenvolvimento de um aplicativo móvel que tem como o
 
 # Tecnologias
 Linguagem: Java
+
 IDE: Android Studio 
 
 ## Sátiro Gabriel de Souza Santos - 23025414
